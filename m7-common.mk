@@ -99,6 +99,11 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+    
+# Speed up art
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.image-dex2oat-filter=everything \
+dalvik.vm.dex2oat-filter=everything
 
 # NFC
 PRODUCT_PACKAGES += \
